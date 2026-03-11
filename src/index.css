@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+body {
+  @apply bg-brand-white text-brand-navy overflow-x-hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-display font-bold;
+}
+
+.glass-nav {
+  @apply bg-white/80 backdrop-blur-md border-b border-brand-navy/5;
+}
+
+.btn-primary {
+  @apply bg-brand-turquoise hover:bg-brand-marine text-brand-navy font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-brand-turquoise/20;
+}
+
+.section-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20;
+}
