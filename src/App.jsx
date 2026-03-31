@@ -50,7 +50,7 @@ function App() {
     return (
         <SiteContentProvider>
             <AuthProvider>
-                <BrowserRouter>
+                <BrowserRouter basename="/werafika-landing">
                     <Routes>
                         <Route path="/" element={<LandingPage />} />
                         <Route path="/referencje" element={<ReferencesPage />} />

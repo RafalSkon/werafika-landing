@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { Shield, TrendingDown, ClipboardCheck, ArrowRight } from 'lucide-react'
 import { useSiteContent } from '../hooks/useSiteContent'
+import heroBg from '../assets/hero-bg.png'
 
 export const Hero = () => {
     const { siteContent } = useSiteContent()
@@ -17,7 +18,7 @@ export const Hero = () => {
             {/* Background with Overlay */}
             <div className="absolute inset-0 z-0">
                 <img
-                    src="/src/assets/hero-bg.png"
+                    src={heroBg}
                     alt="Premium Interior"
                     className="w-full h-full object-cover"
                 />

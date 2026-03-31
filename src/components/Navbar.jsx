@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Shield } from 'lucide-react'
 import { useSiteContent } from '../hooks/useSiteContent'
+import logo from '../assets/logo.png'
 
 export const Navbar = () => {
     const { siteContent } = useSiteContent()
@@ -28,7 +29,7 @@ export const Navbar = () => {
             </Link>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center relative">
                 <Link to="/" className="flex items-center gap-3">
-                    <img src="/src/assets/logo.png" alt="WeRafika" className="h-10 w-auto rounded-lg" />
+                    <img src={logo} alt="WeRafika" className="h-10 w-auto rounded-lg" />
                     <div className={`text-2xl font-display font-black tracking-tight ${isScrolled || !isHome ? 'text-brand-navy' : 'text-brand-white'}`}>
                         <span className="text-brand-turquoise">We</span>Rafika
                     </div>
