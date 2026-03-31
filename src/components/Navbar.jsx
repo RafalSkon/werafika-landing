@@ -37,7 +37,7 @@ export const Navbar = () => {
 
                 <div className="hidden md:flex items-center gap-8">
                     {navItems.map((item) => (
-                        item.path.startsWith('/#') ? (
+                        item.path.includes('#') ? (
                             <a
                                 key={item.label}
                                 href={item.path}
@@ -55,7 +55,7 @@ export const Navbar = () => {
                             </Link>
                         )
                     ))}
-                    <a href="/#analiza" className="btn-primary py-2 px-6 text-sm">
+                    <a href="#analiza" className="btn-primary py-2 px-6 text-sm">
                         {siteContent.navbar.ctaText}
                     </a>
                 </div>

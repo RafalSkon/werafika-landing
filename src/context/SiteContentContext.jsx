@@ -8,11 +8,11 @@ const defaultContent = {
   navbar: {
     ctaText: 'Bezpłatna analiza',
     navItems: [
-      { label: 'Model Win-Win', path: '/#model-win-win' },
-      { label: 'Porównanie', path: '/#porównanie' },
-      { label: 'O nas', path: '/#o-nas' },
+      { label: 'Model Win-Win', path: '#model-win-win' },
+      { label: 'Porównanie', path: '#porównanie' },
+      { label: 'O nas', path: '#o-nas' },
       { label: 'Referencje', path: '/referencje' },
-      { label: 'Analiza', path: '/#analiza' },
+      { label: 'Analiza', path: '#analiza' },
     ]
   },
   hero: {
