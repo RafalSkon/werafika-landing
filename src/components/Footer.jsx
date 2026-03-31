@@ -1,7 +1,11 @@
 import React from 'react'
 import { Instagram, Facebook, Linkedin, Mail, Phone } from 'lucide-react'
+import { useSiteContent } from '../hooks/useSiteContent'
 
 export const Footer = () => {
+    const { siteContent } = useSiteContent()
+    const { footer } = siteContent
+
     return (
         <footer className="bg-brand-navy text-brand-white pt-20 pb-10 border-t border-white/5">
             <div className="section-container">
@@ -11,7 +15,7 @@ export const Footer = () => {
                             <span className="text-brand-turquoise">We</span>Rafika
                         </div>
                         <p className="text-brand-white/50 max-w-sm mb-8">
-                            Profesjonalny nadzór i optymalizacja kosztów remontu. Budujemy zaufanie na każdym metrze kwadratowym Twojej inwestycji.
+                            {footer.description}
                         </p>
                         <div className="flex gap-4">
                             {[Instagram, Facebook, Linkedin].map((Icon, idx) => (
@@ -37,21 +41,21 @@ export const Footer = () => {
                         <ul className="space-y-4 text-brand-white/40">
                             <li className="flex items-center gap-3">
                                 <Phone size={16} className="text-brand-turquoise" />
-                                <span>+48 123 456 789</span>
+                                <span>{footer.phone}</span>
                             </li>
                             <li className="flex items-center gap-3">
                                 <Mail size={16} className="text-brand-turquoise" />
-                                <span>kontakt@werafika.pl</span>
+                                <span>{footer.email}</span>
                             </li>
                             <li className="mt-4">
-                                Kraków / Warszawa / Wrocław
+                                {footer.locations}
                             </li>
                         </ul>
                     </div>
                 </div>
 
                 <div className="pt-8 border-t border-white/5 flex flex-col md:row justify-between items-center gap-4 text-xs text-brand-white/20 uppercase tracking-widest font-bold">
-                    <p>© 2024 WeRafika. Wszystkie prawa zastrzeżone.</p>
+                    <p>{footer.copyright}</p>
                     <div className="flex gap-8">
                         <a href="#" className="hover:text-brand-turquoise transition-colors">Polityka prywatności</a>
                         <a href="#" className="hover:text-brand-turquoise transition-colors">Regulamin</a>

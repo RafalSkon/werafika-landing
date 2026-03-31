@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useSiteContent } from '../hooks/useSiteContent'
 import {
     Home,
     Paintbrush,
@@ -23,6 +24,8 @@ const STEPS = [
 ]
 
 export const LeadMagnetForm = () => {
+    const { siteContent } = useSiteContent()
+    const { leadMagnet } = siteContent
     const [currentStep, setCurrentStep] = useState(1)
     const [formData, setFormData] = useState({
         investmentType: '',
@@ -80,8 +83,8 @@ export const LeadMagnetForm = () => {
         <section id="lead-magnet" className="py-24 bg-white relative overflow-hidden">
             <div className="max-w-4xl mx-auto px-4">
                 <div className="text-center mb-12">
-                    <h2 className="text-4xl md:text-5xl mb-4">Skrojony na <span className="text-brand-turquoise">miarę</span> kosztorys.</h2>
-                    <p className="text-gray-600 text-lg">Przejdź przez 4 kroki, a my obliczymy Twoje realne oszczędności.</p>
+                    <h2 className="text-4xl md:text-5xl mb-4">{leadMagnet.title}<span className="text-brand-turquoise">{leadMagnet.titleSpan}</span>{leadMagnet.titleSuffix}</h2>
+                    <p className="text-gray-600 text-lg">{leadMagnet.subtitle}</p>
                 </div>
 
                 {/* Stepper */}
