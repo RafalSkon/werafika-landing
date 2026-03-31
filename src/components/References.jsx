@@ -13,7 +13,7 @@ export const References = () => {
   const featuredReferences = references.slice(0, 3);
 
   return (
-    <section id="referencje" className="py-24 bg-brand-navy-light/30 relative overflow-hidden">
+    <section id="referencje" className="py-24 bg-brand-navy relative overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-brand-turquoise/5 rounded-full blur-3xl -mr-48 -mt-48" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-turquoise/5 rounded-full blur-3xl -ml-48 -mb-48" />
@@ -47,7 +47,7 @@ export const References = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-brand-navy p-8 rounded-2xl border border-brand-white/10 hover:border-brand-turquoise/30 transition-all group flex flex-col justify-between"
+              className="bg-brand-navyLight p-8 rounded-2xl border border-brand-white/10 hover:border-brand-turquoise/30 transition-all group flex flex-col justify-between"
             >
               <div>
                 <div className="flex gap-1 mb-4">

@@ -9,6 +9,7 @@ export default {
             colors: {
                 brand: {
                     navy: "#0A192F",
+                    navyLight: "#112240",
                     turquoise: "#00CED1",
                     marine: "#008B8B",
                     white: "#FFFFFF",
